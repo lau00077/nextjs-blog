@@ -1,1 +1,1 @@
-This is my portfolio built by Next.js and Tailwind CSS.
+This is a next.js project with Tailwind CSS.
