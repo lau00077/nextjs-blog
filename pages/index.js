@@ -15,12 +15,13 @@ import web1 from "../public/web1.png";
 import web2 from "../public/web2.png";
 import web3 from "../public/web3.png";
 import web4 from "../public/web4.png";
+import SlideInImage from "./components/SlideInImage";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div className={darkMode ? "dark" : ""} >
       <Head>
         <title>Faye Lau</title>
         <meta name="description" content="My Portfolio" />
@@ -48,6 +49,7 @@ export default function Home() {
               </li>
             </ul>
           </nav>
+          
           <div className="text-center p-10 py-10">
             <h2 className="text-5xl py-2 text-orange-400 font-medium dark:text-orange-200 md:text-6xl">
               Faye, Meiyi Lau
@@ -59,19 +61,19 @@ export default function Home() {
             Based in Canada, chasing simplicity as the essence of elegance in digital experiences.
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-200">
-            <a href="https://www.linkedin.com/in/fayelau/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/fayelau/" target="_blank" rel="noopener noreferrer" class="animate-bounce">
               <AiFillLinkedin />
             </a>
 
-            <a href="https://github.com/lau00077" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/lau00077" target="_blank" rel="noopener noreferrer" class="animate-bounce">
               <AiFillGithub />
             </a>
-
             </div>
             <div className="mx-auto bg-gradient-to-b from-orange-200 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
               <Image src={avatar} layout="fill" objectFit="cover" />
             </div>
           </div>
+         
         </section>
         <section>
           <div id="services">
@@ -133,43 +135,41 @@ export default function Home() {
             <h3 className="text-3xl py-1 dark:text-white ">WORKS</h3>
           </div>
           <div className="flex flex-col gap-5 py-8 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1 ">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                objectFit="contain"
-                src={web1}
-              />
+            <div className="basis-1/3 flex-1">
+            <div className="relative overflow-hidden w-full h-full">
+            <SlideInImage
+              className="rounded-lg object-contain"
+              width={"100%"}
+              height={"100%"}
+              layout="responsive"
+              src={web1}
+            />
+            </div>
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
+              <SlideInImage
+                className="rounded-lg object-contain"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
-                objectFit="contain"
                 src={web2}
               />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
+              <SlideInImage
+                className="rounded-lg object-contain"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
-                objectFit="contain"
                 src={web3}
               />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
+              <SlideInImage
+                className="rounded-lg object-contain"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
-                objectFit="contain"
                 src={web4}
               />
             </div>
