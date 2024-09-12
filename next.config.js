@@ -2,9 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+};
 
-module.exports = {
-  output: 'export',
-  distDir: 'docs',
-}
+module.exports = nextConfig;
